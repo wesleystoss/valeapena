@@ -14,6 +14,21 @@ def sobre(request):
 def ranking(request):
     return render(request, 'paginas/ranking.html')
 
+def empresas(request):
+    return render(request, 'paginas/empresas.html')
+
+def enquetes(request):
+    return render(request, 'paginas/enquetes.html')
+
+def faq(request):
+    return render(request, 'paginas/faq.html')
+
+def forum(request):
+    return render(request, 'paginas/forum.html')
+
+def artigos(request):
+    return render(request, 'paginas/artigos.html')
+
 #Páginas de acessos do usuário
 def meus_dados(request):
     return render(request, 'paginas/usuario/meus_dados.html')
