@@ -9,10 +9,50 @@
             <div class="container card" id="busca_avancada" style="display: none;">
                 <h6>Filtros</h6>
                 <div class="item_card">
-                    <form action="">
-                    ...
-                    <br>
-                    <input type="submit" name="f" class="form-control btn btn-outline-primary" value="Buscar">
+                    <form class="form-floating" action="">
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" name="nome_marca" id="nome_marca" placeholder=" ">
+                            <label for="nome_marca">Nome fantasia ou razão social</label>
+                          </div>
+                          <div class="form-floating mb-3">
+                            <input type="text" class="form-control" name="cnpj" minlength="18" onkeypress="$(this).mask('00.000.000/0000-00')" id="cnpj" placeholder=" ">
+                            <label for="cnpj">CNPJ</label>
+                          </div>
+                          <div class="form-floating mb-3">
+                            <input type="text" class="form-control" name="comentario" id="comentario" placeholder=" ">
+                            <label for="comentario">Comentário</label>
+                          </div>
+                        <div class="mb-3">
+                            <label for="">Produto/Serviço</label>
+                            <div style="overflow-y: scroll; max-height: 150px;" class="container">
+                                {% for l_produto in lista_produtos_e_servicos %}
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="produtos/servicos" value="{{l_produto }}" id="{{l_produto }}"><label class="form-check-label" for="{{ l_produto }}">{{ l_produto }}</label>
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                          <div class="col-md mb-3">
+                            <div class="form-floating">
+                              <select class="form-select" name="regiao" id="regiao" placeholder=" ">
+                                <option selected>Selecione...</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                              </select>
+                              <label for="regiao">Região</label>
+                            </div>
+                          </div>
+                          <div>
+                            <select class="form-select">
+                                <option selected>Recentes</option>
+                                <option value="1">Mais antigas</option>
+                              </select>
+                          </div>
+                        <br>
+                        <div class="footer">
+                            <input type="submit" name="f" class="form-control btn btn-outline-primary mb-3" value="Buscar">
+                        </div>
                     </form>
                 </div>
             </div>
@@ -26,8 +66,13 @@
         </div>
         <div class="container col-8">
             <h1 class="text-center">Resultados para: <b>"{{ teste }}"</b></h1>
+            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                <h4 class="alert-heading"><i class="bi bi-exclamation-triangle-fill"></i> Não encontrou o que procurava?</h4>
+                You should check in on some of those fields <a href="" data-bs-toggle="modal" data-bs-target="#sugerir_empresa"><strong>CLIQUE AQUI</strong></a>.
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+              </div>
             <div class="card container">
-                <h6>Empresas</h6>
+                <h6>Empresas<i class="bi bi-arrows-fullscreen float-end icone_cabecario_card"></i></h6>
                 <p class="descricao_card">Fique por dentro do melhor marketing nos últimos 6 meses</p>
                 <div class="item_card">
                     ...
@@ -37,7 +82,7 @@
                 </div>
             </div>
             <div class="card container">
-                <h6>Comentários</h6>
+                <h6>Comentários<i class="bi bi-arrows-fullscreen float-end icone_cabecario_card"></i></h6>
                 <p class="descricao_card">Fique por dentro do melhor marketing nos últimos 6 meses</p>
                 <div class="item_card">
                     ...
@@ -47,7 +92,7 @@
                 </div>
             </div>            
             <div class="card container">
-                <h6>Enquetes</h6>
+                <h6>Enquetes<i class="bi bi-arrows-fullscreen float-end icone_cabecario_card"></i></h6>
                 <p class="descricao_card">Fique por dentro do melhor marketing nos últimos 6 meses</p>
                 <div class="item_card">
                     ...
@@ -57,7 +102,7 @@
                 </div>
             </div>
             <div class="card container">
-                <h6>Artigos</h6>
+                <h6>Artigos<i class="bi bi-arrows-fullscreen float-end icone_cabecario_card"></i></h6>
                 <p class="descricao_card">Fique por dentro do melhor marketing nos últimos 6 meses</p>
                 <div class="item_card">
                     ...
@@ -68,5 +113,56 @@
             </div>
         </div>
     </div>
+    <!-- Modal sugerir empresa -->
+        <div class="modal fade" id="sugerir_empresa" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Sugerir empresa</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form class="form-floating" action="">
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" name="nome_marca" id="nome_marca" placeholder=" " required>
+                            <label for="nome_marca">*Nome fantasia ou razão social</label>
+                          </div>
+                          <div class="form-floating mb-3">
+                            <input type="text" class="form-control" name="cnpj" minlength="18" onkeypress="$(this).mask('00.000.000/0000-00')" id="cnpj" placeholder=" ">
+                            <label for="cnpj">CNPJ</label>
+                          </div>
+                          <div class="form-floating mb-3">
+                            <input type="url" class="form-control" name="site" minlength="18" id="site" placeholder="https://www.teste.com.br">
+                            <label for="site">Site</label>
+                          </div>
+                        <div class="mb-3">
+                            <label for="">Produto/Serviço</label>
+                            <div style="overflow-y: scroll; max-height: 150px;" class="container">
+                                {% for l_produto in lista_produtos_e_servicos %}
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="m_{{l_produto }}"><label class="form-check-label" for="m_{{ l_produto }}">{{ l_produto }}</label>
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                          <div class="col-md mb-3">
+                            <div class="form-floating">
+                              <select class="form-select" name="regiao" id="regiao" placeholder=" ">
+                                <option selected>Selecione...</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                              </select>
+                              <label for="regiao">Região</label>
+                            </div>
+                          </div>
+                        <div class="modal-footer">
+                            <input type="submit" name="f" class="form-control btn btn-primary mb-3" value="Enviar sugestão">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            </div>
+        </div>
 </main>
 {%endblock%}

@@ -3,11 +3,11 @@ body{
     overflow-x: hidden;
 }
 main{
-  min-height: 400px;
+  min-height: 420px!important;
 }
 .banner_home{
     background-color: #a3d3e8;
-    background-color: dodgerblue;
+    background-color: #0d6efd;
     height: 350px;
 }
 header{
@@ -188,4 +188,18 @@ ul.social-network li {
 .chat_icon{
   right: 50px;
   bottom: 20px;
+}
+a.icone_notificacoes{
+  text-decoration: none; 
+  color: black;
+}
+a{
+  text-decoration: none;
+}
+i.icone_cabecario_card{
+  color: #aaa;
+}
+i.bi.bi-chat-right-dots-fill.position-fixed.chat_icon:hover {
+  transform: scale(1.2);
+  transition: 0.30s;
 }
