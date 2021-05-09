@@ -6,7 +6,9 @@ def index(request):
     return render(request, 'paginas/index.html')
 
 def busca(request):
-    return render(request, 'paginas/busca.html')
+    return render(request, 'paginas/busca.html', {
+        'lista_produtos_e_servicos': ("Celulares e smartphones", "Relógios", "Camisetas, blusas e camisas femininas", "Cartões de memória","Barras de cereal", "Maquiagem sem crueldade", "Matcha em pó/chá")
+    })
 
 def sobre(request):
     return render(request, 'paginas/sobre.html')
@@ -35,3 +37,7 @@ def meus_dados(request):
 
 def usuario_seguranca(request):
     return render(request, 'paginas/usuario/seguranca.html')
+
+
+
+# Funções locais
