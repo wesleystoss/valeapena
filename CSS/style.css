@@ -1,0 +1,165 @@
+.card{
+    box-shadow: 0 20px 28px 0 rgba(4, 68, 77, .05);
+    border-top: 3px solid rgb(31, 105, 193)!important;
+}
+.card:hover{
+    border: 1px solid #0052cc;
+}
+.card h5{   
+    padding-top: 10px;
+    vertical-align: middle;
+    border-bottom: 1px solid #ddd;
+}
+.search-div {
+    *background-color: #04339d;
+    *background-color: rgb(31, 105, 193)!important;
+    *background-image: url("https://centraloftalmica.com.br/wp-content/uploads/2020/09/16011376975f6f6c21559cc.jpeg");
+    background-image: url("../IMG/wallpaper.jpeg");
+    background-size: cover;
+    width: 100%;
+    height: 690px;
+    font-size: 22px;
+    margin-bottom: -100px;
+}
+.search-div input[type="search"]{
+    max-width: 720px;
+}
+ul li {
+    list-style: none;
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: none!important;
+    color: red!important;
+}
+h5 p {
+    font-size: 15px;
+    color: #aaa;
+    font-weight: 400;
+    padding-top: 6px;
+}
+footer {
+    text-align: center;
+    height: 180px;
+    background-color: #f9fafc;
+    width: 100%;
+    border-top: 1px solid #ccc;
+    border-bottom: 7px solid rgb(31, 105, 193)!important;
+}
+footer h5{
+    padding-top: 80px;
+    margin-top: 20px;
+}
+.container{
+    margin-bottom: 20px!important;
+}
+.mais-comentadas ul li {
+    border-bottom: 1px solid #ddd;
+    height: 50px;
+    font-weight: 500;
+    color: black;
+}
+.mais-comentadas ul li img{
+    margin-right: 35px;
+}
+a li {
+    padding: 4px;
+}
+.mais-comentadas a li:hover {
+    background-color: *#ff000a;
+    background-color: *#04339d;
+    border-radius: 4px;
+    color: *white;
+    *border: 1px solid #0052cc;
+    background: #f6f9ff;
+}
+.spinner-grow {
+    margin: auto;
+}
+main{
+    margin-top: 62px;
+}
+header{
+    background-color: white;
+    border-bottom: 1px solid #ddd;
+}
+.como-funciona{
+    display: none;
+    max-width: 270px;
+    position: absolute;
+    right: 124px;
+    bottom: 0px;
+}
+.icon-ajuda img:hover{
+    transition: 0.5s;
+    transform: scale(1.2);
+    cursor: pointer;
+}
+span.votacao {
+    color: #bbb;
+    position: absolute;
+    bottom: 10px;
+    width: 100px;
+    right: 10px;
+}
+.list-group-item {
+    height: 230px;
+}
+.comentario {
+
+}
+.titulo-enquete{
+    height: 35px;
+    border-bottom: 1px solid #9fcdff;
+}
+.bi-box-arrow-up-right{
+    color: black!important;
+}
+.titulo_pesquisa span{
+    font-size: 2.5rem;
+}
+.card ul a li {
+    top: -8px;
+    position: relative;
+}
+.carousel-item {
+    max-width: 379px;
+    height: 163px;
+    padding: 15px;
+}
+.wallpaper-shadow{
+    height: 100%;
+    width: 100%;
+    opacity: 50%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: black;
+    display: none;
+}
+.result_previews {
+    display: none;
+    position: relative;
+    transition: 5s;
+    background-color: white;
+    border-radius: 4px;
+    margin-top: 15px;
+}
+.navbar-light .navbar-nav .nav-link{
+    font-weight: bold;
+}
+.nav-link:hover {
+    background-color: #1F73B7;
+    border-radius: 5px;
+    color: white!important;
+    text-shadow: black 0em 0em 5em;
+}
+a.dropdown-item:hover{
+    background-color: #1F73B7;
+    color: white!important;
+    text-shadow: black 0em 0em 5em;   
+}
+span#basic-addon2 {
+    background: white!important;
+}
