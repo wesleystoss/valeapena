@@ -1,0 +1,21 @@
+{%extends 'base.html'%}
+
+{%block 'conteudo'%}
+<main>
+    <div class="row">
+        {% include 'parciais/_menu_usuario.html' %}
+        <div class="container card col-8">
+            <h6>Alterar senha</h6>
+            <form>
+                <label>Senha atual:</label>
+                    <input type="password" required class="form-control mb-3" name="senha_atual">
+                <label>Nova senha:</label>
+                    <input type="password" required class="form-control mb-3" name="nova_senha">
+                <label>Confirmar nova senha:</label>
+                    <input type="password" required class="form-control mb-3" name="confirmar_senha">
+                <input type="submit" class="form-control btn btn-outline-primary mb-3" value="Salvar">
+            </form>
+        </div>
+    </div>
+</main>
+{%endblock%}
