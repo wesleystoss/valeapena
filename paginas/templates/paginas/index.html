@@ -1,0 +1,84 @@
+{%extends 'base.html'%}
+
+{%block 'conteudo'%}
+<style>
+    header{
+        margin-bottom: 0;
+    }
+</style>
+<main>
+    <div class="banner_home mb-3">
+        <div class="itens_banner_home">
+            <b style="text-shadow: black 0.1em 0.1em 0.2em; font-size: 25px; color: white;">Pesquise sobre as reputações das marcas ou abra uma enquete!</b>
+            <br><br>
+            <form action="./busca">
+                <div class="input-group input-group-lg">
+                    <span class="input-group-text" id="inputGroup-sizing-lg"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                      </svg></span>
+                    <input type="text" class="form-control" name="s" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" placeholder="Buscar por uma empresa, produto ou serviço, comentário, enquete ou artigo">
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="container cards_home row">
+        <div class="container alert alert-warning alert-dismissible fade show" role="alert" style="height: 250px; max-width: 98%;">
+            <h4 class="alert-heading">Novo por aqui?</h4>
+            You should check in on some of those fields below.
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+        <div class="esquerda col-3">
+            <div class="card container mais_comentadas">
+                <h6>Mais comentadas</h6>
+                <p class="descricao_card">Fique por dentro do melhor marketing nos últimos 6 meses</p>
+                <div class="item_card">
+                    ...
+                </div>
+                <div class="mb-3 text-center">
+                    <a href="#" class="link_card">Ver mais</a>
+                </div>
+            </div>
+            <div class="card container novas_empresas">
+                <h6>Conheça novas empresas</h6>
+                <p class="descricao_card">Estas são marcas que talvez você goste</p>
+                <div class="item_card">
+                    ...
+                </div>
+                <div class="mb-3 text-center">
+                    <a href="#" class="link_card">Ver mais</a>
+                </div>
+            </div>
+        </div>
+        <div class="meio col-6">
+            <div class="card container" style="height: 850px;">
+                <h6>Atividades recentes</h6>
+                <p class="descricao_card">Outros clientes abriram discussões dentro do portal. Dê sua opinião!</p>
+                <div class="item_card">
+                    ...
+                </div>
+            </div>
+            <div class="container card enquetes" style="height: 350px;">
+                <h6>Enquetes populares</h6>
+                <div class="item_card">
+                    ...
+                </div>
+                <div class="mb-3 text-center">
+                    <a href="#" class="link_card">Ver mais</a>
+                </div>
+            </div>
+        </div>
+        <div class="direita col-3">
+            <div class="card container ultimos_artigos">
+                <h6>Últimos artigos</h6>
+                <p class="descricao_card">Veja alguns artigos publicados por nossa equipe</p>
+                <div class="item_card">
+                    ...
+                </div>
+                <div class="mb-3 text-center">
+                    <a href="#" class="link_card">Ver mais</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+{%endblock%}
