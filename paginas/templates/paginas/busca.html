@@ -9,10 +9,39 @@
             <div class="container card" id="busca_avancada" style="display: none;">
                 <h6>Filtros</h6>
                 <div class="item_card">
-                    <form action="">
-                    ...
-                    <br>
-                    <input type="submit" name="f" class="form-control btn btn-outline-primary" value="Buscar">
+                    <form class="form-floating" action="">
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" name="nome_marca" id="nome_marca" placeholder=" ">
+                            <label for="nome_marca">Nome fantasia ou razão social</label>
+                          </div>
+                          <div class="form-floating mb-3">
+                            <input type="text" class="form-control" name="cnpj" id="cnpj" placeholder=" ">
+                            <label for="cnpj">CNPJ</label>
+                          </div>
+                          <div class="col-md mb-3">
+                            <div class="form-floating">
+                              <select class="form-select" name="produto/servico" id="produto/servico" placeholder=" ">
+                                <option selected>Selecione...</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                              </select>
+                              <label for="produto/servico">Produto/Serviço</label>
+                            </div>
+                          </div>
+                          <div class="col-md">
+                            <div class="form-floating">
+                              <select class="form-select" name="regiao" id="regiao" placeholder=" ">
+                                <option selected>Selecione...</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                              </select>
+                              <label for="regiao">Região</label>
+                            </div>
+                          </div>
+                        <br>
+                        <input type="submit" name="f" class="form-control btn btn-outline-primary mb-3" value="Buscar" style="padding: 0;">
                     </form>
                 </div>
             </div>
@@ -26,6 +55,11 @@
         </div>
         <div class="container col-8">
             <h1 class="text-center">Resultados para: <b>"{{ teste }}"</b></h1>
+            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                <h4 class="alert-heading"><i class="bi bi-exclamation-triangle-fill"></i> Não encontrou o que procurava?</h4>
+                You should check in on some of those fields <a href=""><strong>CLIQUE AQUI</strong></a>.
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+              </div>
             <div class="card container">
                 <h6>Empresas</h6>
                 <p class="descricao_card">Fique por dentro do melhor marketing nos últimos 6 meses</p>
