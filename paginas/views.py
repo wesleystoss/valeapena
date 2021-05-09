@@ -16,6 +16,9 @@ def sobre(request):
 def ranking(request):
     return render(request, 'paginas/ranking.html')
 
+def compare(request):
+    return render(request, 'paginas/compare.html')
+
 def empresas(request):
     return render(request, 'paginas/empresas.html')
 
@@ -37,6 +40,9 @@ def meus_dados(request):
 
 def usuario_seguranca(request):
     return render(request, 'paginas/usuario/seguranca.html')
+
+def usuario_alertas(request):
+    return render(request, 'paginas/usuario/alertas.html')
 
 
 
