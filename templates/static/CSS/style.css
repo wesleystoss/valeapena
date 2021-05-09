@@ -189,3 +189,7 @@ ul.social-network li {
   right: 50px;
   bottom: 20px;
 }
+a.icone_notificacoes{
+  text-decoration: none; 
+  color: black;
+}
