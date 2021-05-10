@@ -1,5 +1,4 @@
 from django.shortcuts import render, get_object_or_404
-import requests
 
 #Páginas genéricas
 def index(request):
@@ -7,7 +6,8 @@ def index(request):
 
 def busca(request):
     return render(request, 'paginas/busca.html', {
-        'lista_produtos_e_servicos': ("Celulares e smartphones", "Relógios", "Camisetas, blusas e camisas femininas", "Cartões de memória","Barras de cereal", "Maquiagem sem crueldade", "Matcha em pó/chá")
+        'lista_produtos_e_servicos': ("Celulares e smartphones", "Relógios", "Camisetas, blusas e camisas femininas", "Cartões de memória","Barras de cereal", "Maquiagem sem crueldade", "Matcha em pó/chá"),
+        'termo_procurado': request.GET.get('s')
     })
 
 def sobre(request):
