@@ -5,9 +5,16 @@
 <main style="margin-top: 3%;">
     <div class="row">
         <div class="container col-3">
-            <button type="button" class="btn btn-outline-warning form-control mb-3" onclick="mostrar_busca_avancada()"><img src="{% static 'img/icons/magic.svg'%}" height="20" width="20"> Busca avançada</button>
-            <div class="container card" id="busca_avancada" style="display: none;">
-                <h6>Filtros</h6>
+            <!--<div class="container card alert-primary color-white alert alert-dismissible fade show" role="alert" style="min-height: 0;">
+                <div class="text-center">
+                    <img src="{% static 'img/icons/ideia.png'%}" class="mb-3" height="50" width="50">
+                </div>                
+                <span class="mb-3">Nosso portal funciona através de pesquisas gerais. Isso quer dizer que em um único campo você pode pesquisar por empresas, produtos/serviços, comentários ou enquetes.</span>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>-->
+            <!-- <button type="button" class="btn btn-outline-warning form-control mb-3" onclick="mostrar_busca_avancada()"><img src="{% static 'img/icons/magic.svg'%}" height="20" width="20"> Busca avançada</button> -->
+            <div class="container card" id="busca_avancada" style="display: *none;">
+                <h6>Busca avançada</h6>
                 <div class="item_card">
                     <form class="form-floating" action="">
                         <div class="form-floating mb-3">
@@ -56,19 +63,13 @@
                     </form>
                 </div>
             </div>
-            <div class="container card alert-primary color-white alert alert-dismissible fade show" role="alert" style="min-height: 0;">
-                <div class="text-center">
-                    <img src="{% static 'img/icons/ideia.png'%}" class="mb-3" height="50" width="50">
-                </div>                
-                <span class="mb-3">Nosso portal funciona através de pesquisas gerais. Isso quer dizer que em um único campo você pode pesquisar por empresas, produtos/serviços, comentários ou enquetes.</span>
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>
         </div>
         <div class="container col-8">
             <h1 class="text-center">Resultados para: <b>"{{ teste }}"</b></h1>
-            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <div class="container alert alert-warning alert-dismissible fade show" role="alert">
                 <h4 class="alert-heading"><i class="bi bi-exclamation-triangle-fill"></i> Não encontrou o que procurava?</h4>
-                You should check in on some of those fields <a href="" data-bs-toggle="modal" data-bs-target="#sugerir_empresa"><strong>CLIQUE AQUI</strong></a>.
+                Lorem ipsum ornare fames ante vulputate tempus suspendisse, litora nam ultrices euismod hac aenean, amet neque turpis massa id auctor. 
+                <a href="" data-bs-toggle="modal" data-bs-target="#sugerir_empresa"><strong>CLIQUE AQUI</strong></a>.
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
               </div>
             <div class="card container">

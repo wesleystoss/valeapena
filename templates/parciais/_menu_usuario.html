@@ -1,7 +1,7 @@
 {% load static %}
-<div class="container card col-3" style="min-height: 300px;">
-    <div class="row mb-3">
-        <div class="col-4">
+<div class="container card col-2" style="min-height: 300px;">
+    <div class="row">
+        <div class="col" style="max-width: 100px;">
             <i class="bi bi bi-person-badge" style="font-size: 100px;"></i>
         </div>
         <div class="cracha_usuario col" style="padding-top: 10%;">
@@ -9,13 +9,17 @@
             <label>Email <i class="bi bi-x-circle-fill" style="color: orangered;"></i></label><br>
             <label>23 anos</label><br>
         </div>
+        <span class="badge rounded-pill bg-info text-dark user_cargo">Admin</span>
     </div>
+    <hr>
     <ul class="menu_usuario">
         <li><a href="#Ver_perfil">Ver perfil</li></a>
+        <li><a href="#Criar_conteudo">Criar conteúdo</li></a>
         <li><a href="{% url 'meus_dados' %}">Dados da conta</li></a>
         <li><a href="{% url 'seguranca' %}">Segurança</li></a>
-        <li class="dropdown-toggle" role="button">Newslestter </li>
-          <ul>
+        <li class="dropdown-toggle" role="button" onclick="m_usu_news()"><i>Newslestter</i> </li>
+        <input type="hidden" id="ver_newslestter">
+          <ul id="lista_news" style="display: none;">
             <li><a href="#Empresas">Empresas</a></li>
             <li><a href="#Enquetes">Enquetes</a></li>
           </ul>
