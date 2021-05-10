@@ -12,3 +12,19 @@ function m_usu_news(){
         document.getElementById("ver_newslestter").value = "Ver"
     }
  }
+
+ // Botão voltar ao topo
+    $(document).scroll(function() {
+        var y = $(this).scrollTop();
+            if (y > 300) {
+                $('.subir')
+                .css({
+                    'display': 'block'
+                });
+            } else {
+                $('.subir')
+                .css({
+                    'display': 'none'
+                });
+            }
+    });

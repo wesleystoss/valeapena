@@ -8,7 +8,8 @@ main{
 .banner_home{
     background-color: #a3d3e8;
     background-color: #0d6efd;
-    height: 350px;
+    background-color: #000d45;
+    height: 400px;
 }
 header{
     margin-bottom: 3%;
@@ -125,12 +126,16 @@ ul.social-network li {
 .social-network a.icoFacebook:hover {
   background-color: #149cd6;
 }
+.social-network a.icoTelegram:hover {
+  background-color: #149cd6;
+}
 
 .social-network a.icoLinkedin:hover {
   background-color: #007bb7;
 }
 
 .social-network a.icoFacebook:hover i,
+.social-network a.icoTelegram:hover i,
 .social-network a.icoLinkedin:hover i {
   color: #fff;
 }
@@ -189,7 +194,7 @@ ul.social-network li {
     height: 100%;
 }
 .chat_icon{
-  right: 50px;
+  left: 50px;
   bottom: 20px;
 }
 a.icone_notificacoes{
@@ -202,7 +207,7 @@ a{
 i.icone_cabecario_card{
   color: #aaa;
 }
-i.bi.bi-chat-right-dots-fill.position-fixed.chat_icon:hover {
+i.bi.bi-chat-left-dots-fill.position-fixed.chat_icon:hover {
   transform: scale(1.2);
   transition: 0.30s;
 }
@@ -210,4 +215,16 @@ i.bi.bi-chat-right-dots-fill.position-fixed.chat_icon:hover {
   max-width: 265px;
   margin: auto;
   padding: 11px;
+}
+i.bi.bi-chevron-compact-right {
+  font-size: 30px;
+  vertical-align: middle;
+}
+.subir{
+  position:fixed;
+  bottom:20px;
+  right:40px;
+  font-size: 40px; 
+  display: none;
+  opacity: 80%;
 }
