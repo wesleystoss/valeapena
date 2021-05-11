@@ -15,4 +15,7 @@ urlpatterns = [
     path('usuario/', views.meus_dados, name="meus_dados"),
     path('usuario/alertas', views.usuario_alertas, name="alertas"),
     path('usuario/seguranca', views.usuario_seguranca, name="seguranca"),
+    path('usuario/newslestter/artigos', views.news_artigos, name="news_artigos"),
+    path('usuario/newslestter/empresas', views.news_empresas, name="news_empresas"),
+    path('usuario/newslestter/enquetes', views.news_enquetes, name="news_enquetes"),
 ]

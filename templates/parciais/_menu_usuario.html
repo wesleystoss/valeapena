@@ -5,7 +5,7 @@
             <i class="bi bi bi-person-badge" style="font-size: 100px;"></i>
         </div>
         <div class="cracha_usuario col" style="padding-top: 10%;">
-            <b>Wesley Roogério Amorim dos Santos</b><br>
+            <b>Wesley Rogério Amorim dos Santos</b><br>
             <label>Email <i class="bi bi-x-circle-fill" style="color: orangered;"></i></label><br>
             <label>23 anos</label><br>
         </div>
@@ -19,9 +19,10 @@
         <li><a href="{% url 'seguranca' %}">Segurança</li></a>
         <li class="dropdown-toggle" role="button" onclick="m_usu_news()"><i>Newslestter</i> </li>
         <input type="hidden" id="ver_newslestter">
-          <ul id="lista_news" style="display: none;">
-            <li><a href="#Empresas">Empresas</a></li>
-            <li><a href="#Enquetes">Enquetes</a></li>
+        <ul id="lista_news" style="display: none;">
+            <li><a href="{% url 'news_artigos' %}">Artigos</a></li>
+            <li><a href="{% url 'news_empresas' %}">Empresas</a></li>
+            <li><a href="{% url 'news_enquetes' %}">Enquetes</a></li>
           </ul>
     </ul>
 </div>

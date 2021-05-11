@@ -43,6 +43,17 @@ def usuario_seguranca(request):
 
 def usuario_alertas(request):
     return render(request, 'paginas/usuario/alertas.html')
+    
+# Newslestter
+def news_artigos(request):
+    return render(request, 'paginas/usuario/newslestter/artigos.html')
+
+
+def news_empresas(request):
+    return render(request, 'paginas/usuario/newslestter/empresas.html')
+
+def news_enquetes(request):
+    return render(request, 'paginas/usuario/newslestter/enquetes.html')
 
 
 
