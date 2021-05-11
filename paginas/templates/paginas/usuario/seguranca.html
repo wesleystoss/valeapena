@@ -4,7 +4,7 @@
 <main>
     <div class="row">
         {% include 'parciais/_menu_usuario.html' %}
-        <div class="container card col-9">
+        <div class="container card col-9" style="max-height: 320px;">
             <h6>Alterar senha</h6>
             <form>
                 <div class="form-floating mb-3">
@@ -19,7 +19,9 @@
                     <input type="password" class="form-control" required id="floatingPassword" placeholder="Password">
                     <label for="floatingPassword">Confirmar nova senha</label>
                 </div>
-                <input type="submit" class="form-control btn btn-primary mb-3" value="Salvar">
+                <div class="text-center mb-3">
+                    <input type="submit" class="form-control btn btn-primary mb-3" value="Salvar">
+                </div>
             </form>
         </div>
     </div>
