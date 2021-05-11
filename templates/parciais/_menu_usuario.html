@@ -19,9 +19,10 @@
         <li><a href="{% url 'seguranca' %}">Segurança</li></a>
         <li class="dropdown-toggle" role="button" onclick="m_usu_news()"><i>Newslestter</i> </li>
         <input type="hidden" id="ver_newslestter">
-          <ul id="lista_news" style="display: none;">
-            <li><a href="#Empresas">Empresas</a></li>
-            <li><a href="#Enquetes">Enquetes</a></li>
+        <ul id="lista_news" style="display: none;">
+            <li><a href="{% url 'news_artigos' %}">Artigos</a></li>
+            <li><a href="{% url 'news_empresas' %}">Empresas</a></li>
+            <li><a href="{% url 'news_enquetes' %}">Enquetes</a></li>
           </ul>
     </ul>
 </div>
