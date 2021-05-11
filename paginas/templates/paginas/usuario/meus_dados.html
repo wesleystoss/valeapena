@@ -45,9 +45,15 @@
                                 <input type="text" class="form-control" required id="floatingPassword" onkeypress="$(this).mask('(00) 0 0000-0000')" placeholder="text">
                                 <label for="floatingPassword">Telefone 1</label>
                             </div>
-                            <div class="form-floating col-3">
+                            <div class="form-floating col-3 mb-2">
                                 <input type="text" class="form-control" required id="floatingPassword" onkeypress="$(this).mask('(00) 0 0000-0000')" placeholder="text">
                                 <label for="floatingPassword">Telefone 2</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="liberar_contatos">
+                                <label class="form-check-label" for="liberar_contatos">
+                                  Permitir que me encontrem pelos meus contatos
+                                </label>
                             </div>
                         </section>
                         <section class="row g-1 mb-4">
@@ -64,9 +70,15 @@
                                 <input type="text" class="form-control" required id="floatingPassword" value="Asa sul">
                                 <label for="floatingPassword">Bairro</label>
                             </div>
-                            <div class="form-floating col-6">
+                            <div class="form-floating col-6 mb-2">
                                 <input type="text" class="form-control" required id="floatingPassword" onkeypress="$(this).mask('00.000-000')" value="71.979-489">
                                 <label for="floatingPassword">CEP</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="liberar_localidade">
+                                <label class="form-check-label" for="liberar_localidade">
+                                  Permitir que outras pessoas vejam minha localidade
+                                </label>
                             </div>
                         </section>
                         <section class="row g-1 mb-3">                        
@@ -79,7 +91,7 @@
                                 <input type="url" class="form-control" required id="floatingPassword" placeholder="text">
                                 <label for="floatingPassword">Instagram</label>
                             </div>
-                            <div class="form-floating col-4">
+                            <div class="form-floating col-4 mb-2">
                                 <input type="url" class="form-control" required id="floatingPassword" placeholder="text">
                                 <label for="floatingPassword">Linkedin</label>
                             </div>
@@ -92,8 +104,9 @@
                         </section>
                         </div>
                       <div class="mb-3">
-                          <a href="">Termos de privacidade</a>
-                          <p class="text-secondary">*Ao manter o cadastro você concorda com os termos de privacidade da organização</p>
+                          <a href="">Termos de privacidade</a><br>
+                          <span class="text-secondary">*Ao manter o cadastro você concorda com os termos de privacidade da organização</span><br>
+                          <span class="text-secondary">**Declaro que sou o titular dos dados</span>
                       </div>
                       <div class="text-center">
                           <input type="submit" class="form-control btn btn-primary mb-3" value="Salvar">
