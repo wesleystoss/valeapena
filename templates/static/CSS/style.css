@@ -212,7 +212,7 @@ i.bi.bi-chat-left-dots-fill.position-fixed.chat_icon:hover {
   transition: 0.30s;
 }
 .user_cargo{
-  max-width: 265px;
+  max-width: 150px;
   margin: auto;
   padding: 11px;
 }

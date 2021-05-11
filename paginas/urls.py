@@ -13,6 +13,7 @@ urlpatterns = [
     path('forum/', views.forum, name="forum"),
     path('artigos/', views.artigos, name="artigos"),
     path('usuario/', views.meus_dados, name="meus_dados"),
+    path('usuario/conteudo', views.criar_conteudo, name="criar_conteudo"),
     path('usuario/alertas', views.usuario_alertas, name="alertas"),
     path('usuario/seguranca', views.usuario_seguranca, name="seguranca"),
     path('usuario/newslestter/artigos', views.news_artigos, name="news_artigos"),

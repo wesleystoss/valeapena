@@ -38,6 +38,9 @@ def artigos(request):
 def meus_dados(request):
     return render(request, 'paginas/usuario/meus_dados.html')
 
+def criar_conteudo(request):
+    return render(request, 'paginas/usuario/criar_conteudo.html')
+
 def usuario_seguranca(request):
     return render(request, 'paginas/usuario/seguranca.html')
 
