@@ -228,3 +228,6 @@ i.bi.bi-chevron-compact-right {
   display: none;
   opacity: 80%;
 }
+.btn{
+  max-width: 300px;
+}
