@@ -7,13 +7,19 @@
         <div class="container card col-9">
             <h6>Alterar senha</h6>
             <form>
-                <label>Senha atual:</label>
-                    <input type="password" required class="form-control mb-3" name="senha_atual">
-                <label>Nova senha:</label>
-                    <input type="password" required class="form-control mb-3" name="nova_senha">
-                <label>Confirmar nova senha:</label>
-                    <input type="password" required class="form-control mb-3" name="confirmar_senha">
-                <input type="submit" class="form-control btn btn-outline-primary mb-3" value="Salvar">
+                <div class="form-floating mb-3">
+                    <input type="password" class="form-control" required id="floatingPassword" placeholder="Password">
+                    <label for="floatingPassword">Senha atual</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="password" class="form-control" required id="floatingPassword" placeholder="Password">
+                    <label for="floatingPassword">Nova senha</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="password" class="form-control" required id="floatingPassword" placeholder="Password">
+                    <label for="floatingPassword">Confirmar nova senha</label>
+                </div>
+                <input type="submit" class="form-control btn btn-primary mb-3" value="Salvar">
             </form>
         </div>
     </div>
