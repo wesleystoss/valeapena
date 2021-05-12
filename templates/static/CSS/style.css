@@ -231,3 +231,10 @@ i.bi.bi-chevron-compact-right {
 .btn{
   max-width: 300px;
 }
+i.bi.empresas {
+  font-size: 20px;
+  vertical-align: sub;
+}
+tr{
+  vertical-align: middle;
+}
