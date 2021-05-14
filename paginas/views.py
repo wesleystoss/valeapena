@@ -28,8 +28,15 @@ def enquetes(request):
 def faq(request):
     return render(request, 'paginas/faq.html')
 
+# Control do fórum
+
 def forum(request):
-    return render(request, 'paginas/forum.html')
+    return render(request, 'paginas/forum/index.html')
+
+def forum_publicar(request):
+    return render(request, 'paginas/forum/publicar.html',{
+        'nome_marca': request.GET.get('nome_marca','')
+    })
 
 def artigos(request):
     return render(request, 'paginas/artigos.html')
@@ -60,7 +67,7 @@ def news_enquetes(request):
 
 # Visualizando a empresa
 def ver_empresa(request):
-    return render(request, 'paginas/empresa/empresa.html')
+    return render(request, 'paginas/empresa/comentarios.html')
 
 def ver_empresa_avaliacoes(request):
     return render(request, 'paginas/empresa/avaliacoes.html', {

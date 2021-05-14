@@ -1,0 +1,28 @@
+{%extends 'base.html'%}
+
+{%block 'conteudo'%}
+<main>
+    <div class="container card">
+        <h6>Nova publicação</h6>
+        <div class="item_card">
+            <form action="" class="text-center">
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="nome_marca" required placeholder=" " value="{{ nome_marca }}">
+                    <label for="nome_marca">Empresa</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="assunto" required placeholder=" ">
+                    <label for="assunto">Assunto</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" required style="height: 200px"></textarea>
+                    <label for="floatingTextarea2">Comentário</label>
+                </div>
+                <div class="footer mb-3">
+                    <input type="submit" class="btn btn-primary form-control" value="Publicar">
+                </div>
+            </form>
+        </div>
+    </div>
+</main>
+{%endblock%}
