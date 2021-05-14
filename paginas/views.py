@@ -7,7 +7,7 @@ def index(request):
 def busca(request):
     return render(request, 'paginas/busca.html', {
         'lista_produtos_e_servicos': ("Celulares e smartphones", "Relógios", "Camisetas, blusas e camisas femininas", "Cartões de memória","Barras de cereal", "Maquiagem sem crueldade", "Matcha em pó/chá"),
-        'termo_procurado': request.GET.get('s')
+        'termo_procurado': request.GET.get('nome_marca','')
     })
 
 def sobre(request):
@@ -28,8 +28,15 @@ def enquetes(request):
 def faq(request):
     return render(request, 'paginas/faq.html')
 
+# Control do fórum
+
 def forum(request):
-    return render(request, 'paginas/forum.html')
+    return render(request, 'paginas/forum/index.html')
+
+def forum_publicar(request):
+    return render(request, 'paginas/forum/publicar.html',{
+        'nome_marca': request.GET.get('nome_marca','')
+    })
 
 def artigos(request):
     return render(request, 'paginas/artigos.html')
@@ -58,6 +65,14 @@ def news_empresas(request):
 def news_enquetes(request):
     return render(request, 'paginas/usuario/newslestter/enquetes.html')
 
+# Visualizando a empresa
+def ver_empresa(request):
+    return render(request, 'paginas/empresa/comentarios.html')
+
+def ver_empresa_avaliacoes(request):
+    return render(request, 'paginas/empresa/avaliacoes.html', {
+        'tipo_avaliacao': request.GET.get('p', 'Todas')
+    })
 
 
 # Funções locais

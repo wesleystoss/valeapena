@@ -1,0 +1,23 @@
+{% load static %}
+<div class="container card col-3">
+    <div class="row">
+        <div class="container text-center">
+            <img src="{% static 'img/dell.jpg'%}" height="80">
+        </div>
+        <div class="cracha_usuario text-center" style="padding-top: 5%;">
+            <b class="mb-2">DELL</b><br>
+            <label class="mb-2">falecom.dell@dellmarcas.com.br</label><br>
+            <label class="mb-1"><i class="bi bi-telephone-fill"></i> (61) 3259-9994  </label><br>
+            <label class="mb-2"><i class="bi bi-telephone-fill"></i> (61) 9 9964-9668</label><br>
+            <div class="botoes_">
+                <a href="https://dell.com.br" target="_blank"><button class="btn btn-primary">Ver site</button></a>
+                <a href="/forum/publicar?nome_marca=Dell"><button class="btn btn-danger">Reclamar</button></a>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <ul class="menu_usuario">
+        <li><a href="{% url 'ver_empresa'%}">Comentários</li></a>
+        <li><a href="avaliacoes">Ver avaliações</li></a>
+    </ul>
+</div>

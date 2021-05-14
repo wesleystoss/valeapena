@@ -232,9 +232,13 @@ i.bi.bi-chevron-compact-right {
   max-width: 300px;
 }
 i.bi.empresas {
-  font-size: 20px;
+  font-size: 25px;
   vertical-align: sub;
 }
 tr{
   vertical-align: middle;
+}
+.btn-tipo-avaliacao{
+  width: 100%;
+  max-width: 200px;
 }
