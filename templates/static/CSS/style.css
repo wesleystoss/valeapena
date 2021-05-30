@@ -241,6 +241,7 @@ tr{
 .btn-tipo-avaliacao{
   width: 100%;
   max-width: 200px;
+  height: 50px;
 }
 /* Works on Firefox */
 * {
