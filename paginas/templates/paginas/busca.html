@@ -24,16 +24,12 @@
                 <div class="item_card">
                     <form class="form-floating" action="">
                         <div class="form-floating mb-3">
-                            <input type="text" class="form-control" name="nome_marca" id="nome_marca" placeholder=" " value="{{ termo_procurado }}">
-                            <label for="nome_marca">Nome fantasia ou razão social</label>
+                            <input type="text" class="form-control" name="query_g" id="query_g" placeholder=" " value="{{ termo_procurado }}">
+                            <label for="query_g">Busca</label>
                           </div>
                           <div class="form-floating mb-3">
                             <input type="text" class="form-control" name="cnpj" minlength="18" onkeypress="$(this).mask('00.000.000/0000-00')" id="cnpj" placeholder=" ">
                             <label for="cnpj">CNPJ</label>
-                          </div>
-                          <div class="form-floating mb-3">
-                            <input type="text" class="form-control" name="comentario" id="comentario" placeholder=" ">
-                            <label for="comentario">Comentário</label>
                           </div>
                         <div class="mb-3" style="border: 1px solid #ccc; border-radius: 4px; padding: 10px;">
                             <label class="mb-3">Produto/Serviço</label>
@@ -48,7 +44,7 @@
                                 <a href="#" class="link_card" data-bs-toggle="modal" data-bs-target="#modal_filtrar_categorias">Ver mais</a>
                             </div>
                         </div>
-                          <div class="col-md mb-3">
+                          <div class="col-md mb-1">
                             <div class="form-floating">
                               <select class="form-select" name="regiao" id="regiao" placeholder=" ">
                                 <option selected>Selecione...</option>
@@ -58,12 +54,6 @@
                               </select>
                               <label for="regiao">Região</label>
                             </div>
-                          </div>
-                          <div>
-                            <select class="form-select">
-                                <option selected>Recentes</option>
-                                <option value="1">Mais antigas</option>
-                              </select>
                           </div>
                         <br>
                         <div class="footer text-center">
@@ -148,8 +138,8 @@
                 <div class="modal-body">
                     <form class="form-floating" action="">
                         <div class="form-floating mb-3">
-                            <input type="text" class="form-control" name="nome_marca" id="nome_marca" placeholder=" " required>
-                            <label for="nome_marca">*Nome fantasia ou razão social</label>
+                            <input type="text" class="form-control" name="query_g" id="query_g" placeholder=" " required>
+                            <label for="query_g">*Nome fantasia ou razão social</label>
                           </div>
                           <div class="form-floating mb-3">
                             <input type="text" class="form-control" name="cnpj" minlength="18" onkeypress="$(this).mask('00.000.000/0000-00')" id="cnpj" placeholder=" ">
