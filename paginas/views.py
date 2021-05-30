@@ -28,6 +28,9 @@ def enquetes(request):
 def faq(request):
     return render(request, 'paginas/faq.html')
 
+def termo_privacidade(request):
+    return render(request, 'paginas/termo-privacidade.html')
+
 # Control do fórum
 
 def forum(request):

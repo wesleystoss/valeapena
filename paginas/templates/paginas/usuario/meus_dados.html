@@ -42,11 +42,11 @@
                                 <label for="floatingPassword">E-mail comercial</label>
                             </div>
                             <div class="form-floating col-3">
-                                <input type="text" class="form-control" required id="floatingPassword" onkeypress="$(this).mask('(00) 0 0000-0000')" placeholder="text">
+                                <input type="text" class="form-control" required id="floatingPassword" onkeypress="$(this).mask('(00) 0 0000-0000')" value="(61) 9 99999-9999">
                                 <label for="floatingPassword">Telefone 1</label>
                             </div>
                             <div class="form-floating col-3 mb-2">
-                                <input type="text" class="form-control" required id="floatingPassword" onkeypress="$(this).mask('(00) 0 0000-0000')" placeholder="text">
+                                <input type="text" class="form-control" required id="floatingPassword" onkeypress="$(this).mask('(00) 0 0000-0000')" value="(61) 3259-9675">
                                 <label for="floatingPassword">Telefone 2</label>
                             </div>
                             <div class="form-check">
@@ -104,7 +104,7 @@
                         </section>
                         </div>
                       <div class="mb-3">
-                          <a href="">Termos de privacidade</a><br>
+                          <a href="{% url 'termo_privacidade' %}" target="blank">Termos de privacidade</a><br>
                           <span class="text-secondary">*Ao manter o cadastro você concorda com os termos de privacidade da organização</span><br>
                           <span class="text-secondary">**Declaro que sou o titular dos dados</span>
                       </div>
