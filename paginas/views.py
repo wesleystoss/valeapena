@@ -56,6 +56,9 @@ def usuario_seguranca(request):
 
 def usuario_alertas(request):
     return render(request, 'paginas/usuario/alertas.html')
+
+def acessos_recentes(request):
+    return render(request, 'paginas/usuario/acessos_recentes.html')
     
 # Newslestter
 def news_artigos(request):
