@@ -20,6 +20,7 @@ urlpatterns = [
 
     #Fórum
     path('forum/', views.forum, name="forum"),
+    path('forum/post/', views.post, name="post"),
     path('forum/publicar', views.forum_publicar, name="forum_publicar"),
 
 

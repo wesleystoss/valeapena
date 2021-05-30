@@ -36,6 +36,9 @@ def termo_privacidade(request):
 def forum(request):
     return render(request, 'paginas/forum/index.html')
 
+def post(request):
+    return render(request, 'paginas/forum/post.html')
+
 def forum_publicar(request):
     return render(request, 'paginas/forum/publicar.html',{
         'query_g': request.GET.get('query_g','')
