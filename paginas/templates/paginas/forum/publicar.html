@@ -5,16 +5,17 @@
     <div class="container card">
         <h6>Nova publicação 
             <a href="/" class="float-end btn-close"></a>
+            <span class="badge rounded-pill bg-primary" role="button" data-bs-target="#modal_como_funciona_um_forum" data-bs-toggle="modal">Como funciona?</span>
         </h6>
         <div class="item_card">
-            <form action="" class="text-center">
+            <form action="" class="text-center" onsubmit="return confirm('Deseja prosseguir com a publicação?')">
                 <div class="form-floating mb-3">
                     <input type="text" class="form-control" id="nome_marca" required placeholder=" " value="{{ nome_marca }}">
-                    <label for="nome_marca">Empresa</label>
+                    <label for="nome_marca">Nome da Empresa</label>
                 </div>
                 <div class="form-floating mb-3">
                     <input type="text" class="form-control" id="assunto" required placeholder=" ">
-                    <label for="assunto">Assunto</label>
+                    <label for="assunto">Assunto da postagem</label>
                 </div>
                 <div class="form-floating mb-3">
                     <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" required style="height: 200px"></textarea>
@@ -26,5 +27,19 @@
             </form>
         </div>
     </div>
+    <!-- Modal como funciona uma publicação-->
+        <div class="modal fade" id="modal_como_funciona_um_forum" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Como funciona uma publicação no fórum?</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                ...
+                </div>
+            </div>
+            </div>
+        </div>
 </main>
 {%endblock%}
