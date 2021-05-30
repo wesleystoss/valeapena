@@ -261,3 +261,24 @@ tr{
   background-color: #ccc;
   border-radius: 20px;
 }
+.post_no_forum{
+  border-radius: 8px;
+  border-bottom: 2px solid #aaa;
+}
+.foto_user_post{
+  font-size: 40px;
+  vertical-align: middle;
+}
+.post_no_forum:hover{
+  background-color: #f2f8fd;
+}
+.descrição_post{
+  height: 130px;
+}
+.bi-reply-all{
+  font-size: 25px;
+}
+.logo_empresa_post{
+  height: 35px;
+  border-radius: 50%;
+}
