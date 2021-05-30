@@ -64,7 +64,6 @@ def acessos_recentes(request):
 def news_artigos(request):
     return render(request, 'paginas/usuario/newslestter/artigos.html')
 
-
 def news_empresas(request):
     return render(request, 'paginas/usuario/newslestter/empresas.html')
 
