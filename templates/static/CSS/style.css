@@ -3,7 +3,7 @@ body{
     overflow-x: hidden;
 }
 main{
-  min-height: 420px!important;
+  min-height: 473px!important;
 }
 .banner_home{
     background-color: #a3d3e8;
@@ -241,4 +241,44 @@ tr{
 .btn-tipo-avaliacao{
   width: 100%;
   max-width: 200px;
+}
+/* Works on Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: blue orange;
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #e9ecef;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 20px;
+}
+.post_no_forum{
+  border-radius: 8px;
+  border-bottom: 2px solid #aaa;
+}
+.foto_user_post{
+  font-size: 40px;
+  vertical-align: middle;
+}
+.post_no_forum:hover{
+  background-color: #f2f8fd;
+}
+.descrição_post{
+  height: 110px;
+}
+.bi-reply-all{
+  font-size: 25px;
+}
+.logo_empresa_post{
+  height: 35px;
+  border-radius: 50%;
 }

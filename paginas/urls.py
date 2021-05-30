@@ -10,6 +10,7 @@ urlpatterns = [
     path('ranking/', views.ranking, name="ranking"),
     path('compare/', views.compare, name="compare"),
     path('empresas/', views.empresas, name="empresas"),
+    path('termo/privacidade', views.termo_privacidade, name="termo_privacidade"),
 
     # Enquetes
     path('enquetes/', views.enquetes, name="enquetes"),
@@ -29,6 +30,7 @@ urlpatterns = [
     path('usuario/', views.meus_dados, name="meus_dados"),
     path('usuario/conteudo', views.criar_conteudo, name="criar_conteudo"),
     path('usuario/alertas', views.usuario_alertas, name="alertas"),
+    path('usuario/recentes', views.acessos_recentes, name="acessos_recentes"),
     path('usuario/seguranca', views.usuario_seguranca, name="seguranca"),
     path('usuario/newslestter/artigos', views.news_artigos, name="news_artigos"),
     path('usuario/newslestter/empresas', views.news_empresas, name="news_empresas"),

@@ -1,15 +1,253 @@
 {%extends 'base.html'%}
+{%load static%}
 
 {%block 'conteudo'%}
+<style>
+    .comentarios_do_post{
+        font-size: 12px;
+        border-top: 1px solid #ccc;
+    }
+</style>
 <main>
     <div class="container card">
-        <h6>Fórum
+        <h6>Fóruns de discussões
             <a href="{% url 'forum_publicar' %}">
-                <button class="float-end btn btn-danger">
-                    Nova publicação
-                </button>
+                <button class="float-end btn btn-warning">Nova publicação</button>
             </a>
         </h6>
+    <section class="posts_recentes">
+        <div class="post_no_forum container card">
+            <div class="dados_do_post">               
+                <h6 class="mb-4"><i class="bi bi-person-circle foto_user_post"></i> <a href="">Wesley Santos</a> | <img src="{% static 'img/dell.jpg' %}" class="logo_empresa_post"> <a href="../busca/empresa/comentarios">Dell Technologies</a>
+                    <hr>
+                    <span class="float-end text-secondary fst-italic fw-normal">Última atualização 10/05/2021</span>
+                    <a href="">Sugestões de notebooks gamers baratos</a>
+                </h6>
+            </div>
+            <div class="descrição_post mb-4">
+                <span>
+                    It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sit...
+                </span>
+            </div>
+            <div class="comentarios_do_post mb-4">
+                <span>
+                   Agente virtual — KKKK KKKKKKKK KKKKK KKKK
+                </span>
+            </div>
+            <div class="post_footer footer mb-3">
+                <a href=""><i class="bi bi-reply-all"></i> Responder</a>
+            </div>
+        </div>
+        <div class="post_no_forum container card">
+            <div class="dados_do_post">               
+                <h6 class="mb-4"><i class="bi bi-person-circle foto_user_post"></i> <a href="">Wesley Santos</a> | <img src="{% static 'img/dell.jpg' %}" class="logo_empresa_post"> <a href="../busca/empresa/comentarios">Dell Technologies</a>
+                    <hr>
+                    <span class="float-end text-secondary fst-italic fw-normal">Última atualização 10/05/2021</span>
+                    <a href="">Sugestões de notebooks gamers baratos</a>
+                </h6>
+            </div>
+            <div class="descrição_post mb-4">
+                <span>
+                    It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sit...
+                </span>
+            </div>
+            <div class="comentarios_do_post mb-4">
+                <span>
+                   Agente virtual — KKKK KKKKKKKK KKKKK KKKK
+                </span>
+            </div>
+            <div class="post_footer footer mb-3">
+                <a href=""><i class="bi bi-reply-all"></i> Responder</a>
+            </div>
+        </div>
+        <div class="post_no_forum container card">
+            <div class="dados_do_post">               
+                <h6 class="mb-4"><i class="bi bi-person-circle foto_user_post"></i> <a href="">Wesley Santos</a> | <img src="{% static 'img/dell.jpg' %}" class="logo_empresa_post"> <a href="../busca/empresa/comentarios">Dell Technologies</a>
+                    <hr>
+                    <span class="float-end text-secondary fst-italic fw-normal">Última atualização 10/05/2021</span>
+                    <a href="">Sugestões de notebooks gamers baratos</a>
+                </h6>
+            </div>
+            <div class="descrição_post mb-4">
+                <span>
+                    It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sit...
+                </span>
+            </div>
+            <div class="comentarios_do_post mb-4">
+                <span>
+                   Agente virtual — KKKK KKKKKKKK KKKKK KKKK
+                </span>
+            </div>
+            <div class="post_footer footer mb-3">
+                <a href=""><i class="bi bi-reply-all"></i> Responder</a>
+            </div>
+        </div>
+        <div class="post_no_forum container card">
+            <div class="dados_do_post">               
+                <h6 class="mb-4"><i class="bi bi-person-circle foto_user_post"></i> <a href="">Wesley Santos</a> | <img src="{% static 'img/dell.jpg' %}" class="logo_empresa_post"> <a href="../busca/empresa/comentarios">Dell Technologies</a>
+                    <hr>
+                    <span class="float-end text-secondary fst-italic fw-normal">Última atualização 10/05/2021</span>
+                    <a href="">Sugestões de notebooks gamers baratos</a>
+                </h6>
+            </div>
+            <div class="descrição_post mb-4">
+                <span>
+                    It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sit...
+                </span>
+            </div>
+            <div class="comentarios_do_post mb-4">
+                <span>
+                   Agente virtual — KKKK KKKKKKKK KKKKK KKKK
+                </span>
+            </div>
+            <div class="post_footer footer mb-3">
+                <a href=""><i class="bi bi-reply-all"></i> Responder</a>
+            </div>
+        </div>
+        <div class="post_no_forum container card">
+            <div class="dados_do_post">               
+                <h6 class="mb-4"><i class="bi bi-person-circle foto_user_post"></i> <a href="">Wesley Santos</a> | <img src="{% static 'img/dell.jpg' %}" class="logo_empresa_post"> <a href="../busca/empresa/comentarios">Dell Technologies</a>
+                    <hr>
+                    <span class="float-end text-secondary fst-italic fw-normal">Última atualização 10/05/2021</span>
+                    <a href="">Sugestões de notebooks gamers baratos</a>
+                </h6>
+            </div>
+            <div class="descrição_post mb-4">
+                <span>
+                    It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sit...
+                </span>
+            </div>
+            <div class="comentarios_do_post mb-4">
+                <span>
+                   Agente virtual — KKKK KKKKKKKK KKKKK KKKK
+                </span>
+            </div>
+            <div class="post_footer footer mb-3">
+                <a href=""><i class="bi bi-reply-all"></i> Responder</a>
+            </div>
+        </div>
+        <div class="post_no_forum container card">
+            <div class="dados_do_post">               
+                <h6 class="mb-4"><i class="bi bi-person-circle foto_user_post"></i> <a href="">Wesley Santos</a> | <img src="{% static 'img/dell.jpg' %}" class="logo_empresa_post"> <a href="../busca/empresa/comentarios">Dell Technologies</a>
+                    <hr>
+                    <span class="float-end text-secondary fst-italic fw-normal">Última atualização 10/05/2021</span>
+                    <a href="">Sugestões de notebooks gamers baratos</a>
+                </h6>
+            </div>
+            <div class="descrição_post mb-4">
+                <span>
+                    It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sit...
+                </span>
+            </div>
+            <div class="comentarios_do_post mb-4">
+                <span>
+                   Agente virtual — KKKK KKKKKKKK KKKKK KKKK
+                </span>
+            </div>
+            <div class="post_footer footer mb-3">
+                <a href=""><i class="bi bi-reply-all"></i> Responder</a>
+            </div>
+        </div>
+        <div class="post_no_forum container card">
+            <div class="dados_do_post">               
+                <h6 class="mb-4"><i class="bi bi-person-circle foto_user_post"></i> <a href="">Wesley Santos</a> | <img src="{% static 'img/dell.jpg' %}" class="logo_empresa_post"> <a href="../busca/empresa/comentarios">Dell Technologies</a>
+                    <hr>
+                    <span class="float-end text-secondary fst-italic fw-normal">Última atualização 10/05/2021</span>
+                    <a href="">Sugestões de notebooks gamers baratos</a>
+                </h6>
+            </div>
+            <div class="descrição_post mb-4">
+                <span>
+                    It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sit...
+                </span>
+            </div>
+            <div class="comentarios_do_post mb-4">
+                <span>
+                   Agente virtual — KKKK KKKKKKKK KKKKK KKKK
+                </span>
+            </div>
+            <div class="post_footer footer mb-3">
+                <a href=""><i class="bi bi-reply-all"></i> Responder</a>
+            </div>
+        </div>
+        <div class="post_no_forum container card">
+            <div class="dados_do_post">               
+                <h6 class="mb-4"><i class="bi bi-person-circle foto_user_post"></i> <a href="">Wesley Santos</a> | <img src="{% static 'img/dell.jpg' %}" class="logo_empresa_post"> <a href="../busca/empresa/comentarios">Dell Technologies</a>
+                    <hr>
+                    <span class="float-end text-secondary fst-italic fw-normal">Última atualização 10/05/2021</span>
+                    <a href="">Sugestões de notebooks gamers baratos</a>
+                </h6>
+            </div>
+            <div class="descrição_post mb-4">
+                <span>
+                    It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sit...
+                </span>
+            </div>
+            <div class="comentarios_do_post mb-4">
+                <span>
+                   Agente virtual — KKKK KKKKKKKK KKKKK KKKK
+                </span>
+            </div>
+            <div class="post_footer footer mb-3">
+                <a href=""><i class="bi bi-reply-all"></i> Responder</a>
+            </div>
+        </div>
+        <div class="post_no_forum container card">
+            <div class="dados_do_post">               
+                <h6 class="mb-4"><i class="bi bi-person-circle foto_user_post"></i> <a href="">Wesley Santos</a> | <img src="{% static 'img/dell.jpg' %}" class="logo_empresa_post"> <a href="../busca/empresa/comentarios">Dell Technologies</a>
+                    <hr>
+                    <span class="float-end text-secondary fst-italic fw-normal">Última atualização 10/05/2021</span>
+                    <a href="">Sugestões de notebooks gamers baratos</a>
+                </h6>
+            </div>
+            <div class="descrição_post mb-4">
+                <span>
+                    It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sit...
+                </span>
+            </div>
+            <div class="comentarios_do_post mb-4">
+                <span>
+                   Agente virtual — KKKK KKKKKKKK KKKKK KKKK
+                </span>
+            </div>
+            <div class="post_footer footer mb-3">
+                <a href=""><i class="bi bi-reply-all"></i> Responder</a>
+            </div>
+        </div>
+        <div class="post_no_forum container card">
+            <div class="dados_do_post">               
+                <h6 class="mb-4"><i class="bi bi-person-circle foto_user_post"></i> <a href="">Wesley Santos</a> | <img src="{% static 'img/dell.jpg' %}" class="logo_empresa_post"> <a href="../busca/empresa/comentarios">Dell Technologies</a>
+                    <hr>
+                    <span class="float-end text-secondary fst-italic fw-normal">Última atualização 10/05/2021</span>
+                    <a href="">Sugestões de notebooks gamers baratos</a>
+                </h6>
+            </div>
+            <div class="descrição_post mb-4">
+                <span>
+                    It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sit...
+                </span>
+            </div>
+            <div class="comentarios_do_post mb-4">
+                <span>
+                   Agente virtual — KKKK KKKKKKKK KKKKK KKKK
+                </span>
+            </div>
+            <div class="post_footer footer mb-3">
+                <a href=""><i class="bi bi-reply-all"></i> Responder</a>
+            </div>
+        </div>
+    </section>
+    </div>
+    <div class="container col-2">
+        <nav aria-label="Page navigation example">
+            <ul class="pagination">
+              <li class="page-item"><a class="page-link" href="#">Primeira</a></li>
+              <li class="page-item"><a class="page-link" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item"><a class="page-link" href="#">Última</a></li>
+            </ul>
+          </nav>
     </div>
 </main>
 {%endblock%}

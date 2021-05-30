@@ -28,6 +28,9 @@ def enquetes(request):
 def faq(request):
     return render(request, 'paginas/faq.html')
 
+def termo_privacidade(request):
+    return render(request, 'paginas/termo-privacidade.html')
+
 # Control do fórum
 
 def forum(request):
@@ -53,11 +56,13 @@ def usuario_seguranca(request):
 
 def usuario_alertas(request):
     return render(request, 'paginas/usuario/alertas.html')
+
+def acessos_recentes(request):
+    return render(request, 'paginas/usuario/acessos_recentes.html')
     
 # Newslestter
 def news_artigos(request):
     return render(request, 'paginas/usuario/newslestter/artigos.html')
-
 
 def news_empresas(request):
     return render(request, 'paginas/usuario/newslestter/empresas.html')
