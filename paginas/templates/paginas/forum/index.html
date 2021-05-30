@@ -1,15 +1,67 @@
 {%extends 'base.html'%}
-
+{%load static%}
 {%block 'conteudo'%}
+
+<style>
+    .post_no_forum{
+        border-radius: 8px;
+        border-bottom: 2px solid #aaa;
+    }
+    .foto_user_post{
+        font-size: 40px;
+        vertical-align: middle;
+    }
+    .post_no_forum:hover{
+        background-color: #f2f8fd;
+    }
+    .descrição_post{
+        height: 130px;
+    }
+    .bi-reply-all{
+        font-size: 25px;
+    }
+    .logo_empresa_post{
+        height: 35px;
+        border-radius: 50%;
+    }
+</style>
 <main>
     <div class="container card">
         <h6>Fórum
             <a href="{% url 'forum_publicar' %}">
-                <button class="float-end btn btn-warning">
-                    Nova publicação
-                </button>
+                <button class="float-end btn btn-warning">Nova publicação</button>
             </a>
         </h6>
+    <section class="posts_recentes">
+        <div class="post_no_forum container card">
+            <div class="dados_do_post">               
+                <h6><i class="bi bi-person-circle foto_user_post"></i> <a href="">Wesley Santos</a> | <img src="{% static 'img/dell.jpg' %}" class="logo_empresa_post"> <a href="../busca/empresa/comentarios">Dell</a>
+                    <hr>
+                    <a href="">Sugestões de notebooks gamers baratos</a>
+                    <span class="float-end text-secondary fst-italic fw-normal">Última atualização 10/05/2021</span>
+                </h6>
+            </div>
+            <div class="descrição_post">
+                <span>
+                    ADKHAKJDHA AKAG AG DAGDHAGHGHAGHADADG ADSJ ASDJF ASDASDJADJ SDJ AHAA ASDASJK DSAJHQEJHQW O312 HO12 AHL ASDL AS
+                </span>
+            </div>
+            <div class="post_footer footer">
+                <a href=""><i class="bi bi-reply-all"></i> Responder</a>
+            </div>
+        </div>
+    </section>
+    </div>
+    <div class="container col-2">
+        <nav aria-label="Page navigation example">
+            <ul class="pagination">
+              <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+              <li class="page-item"><a class="page-link" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item"><a class="page-link" href="#">Next</a></li>
+            </ul>
+          </nav>
     </div>
 </main>
 {%endblock%}
