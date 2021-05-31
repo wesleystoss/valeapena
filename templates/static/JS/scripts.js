@@ -17,6 +17,9 @@ function m_usu_news(){
  function responder_post(){
     document.getElementById("response").style.display="block";
 }
+function descartar_post(){
+    document.getElementById("response").style.display="none";
+}
 
  // Botão voltar ao topo
     $(document).scroll(function() {
