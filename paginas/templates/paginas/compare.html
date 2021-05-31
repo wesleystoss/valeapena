@@ -2,8 +2,20 @@
 
 {%block 'conteudo'%}
 <main>
-    <div class="container card">
-        <h6>Compare</h6>
+    <div class="container card" style="min-height: 60px;">
+        <h4>Compare lojas</h4>
+    </div>
+    <div class="row">
+        <div class="container card col-4">
+            <form action="">
+                <input type="text" class="form-control" placeholder="Procurar pela primeira empresa">
+            </form>
+        </div>
+        <div class="container card col-4">
+            <form action="">
+                <input type="text" class="form-control" placeholder="Procurar pela segunda empresa"> 
+            </form>
+        </div>
     </div>
 </main>
 {%endblock%}

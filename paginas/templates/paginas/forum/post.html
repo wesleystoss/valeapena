@@ -1,0 +1,40 @@
+{%extends 'base.html'%}
+{% load static %}
+{%block 'conteudo'%}
+<main>
+    <div class="container card">
+        <div class="dados_do_post">               
+            <h6 class="mb-4"><i class="bi bi-person-circle foto_user_post"></i> <a href="">Wesley Santos</a> | <img src="{% static 'img/dell.jpg' %}" class="logo_empresa_post"> <a href="/../busca/empresa/comentarios">Dell Technologies</a>
+                <div class="votes float-end row">
+                    <i class="bi bi-arrow-up text-success mb-3" role="button">345</i>
+                    <i class="bi bi-arrow-down text-danger" role="button">24</i>
+                </div>
+                <hr>
+                <span class="float-end text-secondary fst-italic fw-normal">Postado em 10/05/2021</span>
+                <a href="{% url 'post' %}">Sugestões de notebooks gamers baratos</a>
+            </h6>
+        </div>
+        <div class="descrição_post mb-4">
+            <span>
+                It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sit...
+            </span>
+        </div>
+        <div class="post_footer footer mb-2">
+            <div class="mb-3 row" role="button" style="*width: 120px;" onclick="responder_post()">
+                <a href="#"><i class="bi bi-reply-all"></i> Responder</a>
+            </div>
+            <div id="response" style="display: none;">
+                <hr>
+                <h6 class="mb-3"><i class="bi bi-person-circle foto_user_post"></i> <a href="">Wesley Santos</a></h6>
+                <form action="">
+                    <textarea class="form-control mb-3" rows="10" required></textarea>
+                    <input type="submit" class="btn btn-primary" value="Publicar">
+                        <button class="btn btn-danger"  onclick="descartar_post()">
+                            <i class="bi bi-trash"></i> descartar
+                        </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</main>
+{%endblock%}

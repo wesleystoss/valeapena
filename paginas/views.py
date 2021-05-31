@@ -7,7 +7,7 @@ def index(request):
 def busca(request):
     return render(request, 'paginas/busca.html', {
         'lista_produtos_e_servicos': ("Celulares e smartphones", "Relógios", "Camisetas, blusas e camisas femininas", "Cartões de memória","Barras de cereal", "Maquiagem sem crueldade", "Matcha em pó/chá"),
-        'termo_procurado': request.GET.get('nome_marca','')
+        'termo_procurado': request.GET.get('q','')
     })
 
 def sobre(request):
@@ -36,9 +36,12 @@ def termo_privacidade(request):
 def forum(request):
     return render(request, 'paginas/forum/index.html')
 
+def post(request):
+    return render(request, 'paginas/forum/post.html')
+
 def forum_publicar(request):
     return render(request, 'paginas/forum/publicar.html',{
-        'nome_marca': request.GET.get('nome_marca','')
+        'q': request.GET.get('q','')
     })
 
 def artigos(request):

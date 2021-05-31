@@ -11,29 +11,17 @@
 <main style="margin-top: 3%;">
     <div class="row">
         <div class="container col-3">
-            <!--<div class="container card alert-primary color-white alert alert-dismissible fade show" role="alert" style="min-height: 0;">
-                <div class="text-center">
-                    <img src="{% static 'img/icons/ideia.png'%}" class="mb-3" height="50" width="50">
-                </div>                
-                <span class="mb-3">Nosso portal funciona através de pesquisas gerais. Isso quer dizer que em um único campo você pode pesquisar por empresas, produtos/serviços, comentários ou enquetes.</span>
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>-->
-            <!-- <button type="button" class="btn btn-outline-warning form-control mb-3" onclick="mostrar_busca_avancada()"><img src="{% static 'img/icons/magic.svg'%}" height="20" width="20"> Busca avançada</button> -->
             <div class="container card" id="busca_avancada" style="display: *none;">
                 <h6>Busca avançada</h6>
                 <div class="item_card">
                     <form class="form-floating" action="">
                         <div class="form-floating mb-3">
-                            <input type="text" class="form-control" name="nome_marca" id="nome_marca" placeholder=" " value="{{ termo_procurado }}">
-                            <label for="nome_marca">Nome fantasia ou razão social</label>
+                            <input type="text" class="form-control" name="q" id="q" placeholder=" " value="{{ termo_procurado }}">
+                            <label for="q">Palavras-chave</label>
                           </div>
                           <div class="form-floating mb-3">
                             <input type="text" class="form-control" name="cnpj" minlength="18" onkeypress="$(this).mask('00.000.000/0000-00')" id="cnpj" placeholder=" ">
                             <label for="cnpj">CNPJ</label>
-                          </div>
-                          <div class="form-floating mb-3">
-                            <input type="text" class="form-control" name="comentario" id="comentario" placeholder=" ">
-                            <label for="comentario">Comentário</label>
                           </div>
                         <div class="mb-3" style="border: 1px solid #ccc; border-radius: 4px; padding: 10px;">
                             <label class="mb-3">Produto/Serviço</label>
@@ -48,7 +36,7 @@
                                 <a href="#" class="link_card" data-bs-toggle="modal" data-bs-target="#modal_filtrar_categorias">Ver mais</a>
                             </div>
                         </div>
-                          <div class="col-md mb-3">
+                          <div class="col-md mb-1">
                             <div class="form-floating">
                               <select class="form-select" name="regiao" id="regiao" placeholder=" ">
                                 <option selected>Selecione...</option>
@@ -58,12 +46,6 @@
                               </select>
                               <label for="regiao">Região</label>
                             </div>
-                          </div>
-                          <div>
-                            <select class="form-select">
-                                <option selected>Recentes</option>
-                                <option value="1">Mais antigas</option>
-                              </select>
                           </div>
                         <br>
                         <div class="footer text-center">
@@ -91,7 +73,7 @@
                             <tr>
                                 <td><a href="{% url 'ver_empresa' %}"><img src="{% static 'img/dell.jpg'%}" height="40"> Dell</a></td>
                                 <td><i class="bi bi-emoji-angry empresas"></i> <a href="{% url 'ver_empresa_avaliacoes'%}?p=Ruins">449</a></td>
-                                <td><i class="bi bi-emoji-expressionless empresas"> </i><a href="{% url 'ver_empresa_avaliacoes'%}?p=Razoáveis">479</a></td>
+                                <td><i class="bi bi-emoji-neutral empresas"> </i><a href="{% url 'ver_empresa_avaliacoes'%}?p=Razoáveis">479</a></td>
                                 <td><i class="bi bi-emoji-laughing empresas"></i> <a href="{% url 'ver_empresa_avaliacoes'%}?p=Boas">442</a></td>
                                 <td><i class="bi bi-chat-quote empresas"></i> <a href="{% url 'ver_empresa_avaliacoes'%}">2323</a></td>
                                 <td><i class="bi bi-award empresas"></i> <a href="">10</a></td>
@@ -148,8 +130,8 @@
                 <div class="modal-body">
                     <form class="form-floating" action="">
                         <div class="form-floating mb-3">
-                            <input type="text" class="form-control" name="nome_marca" id="nome_marca" placeholder=" " required>
-                            <label for="nome_marca">*Nome fantasia ou razão social</label>
+                            <input type="text" class="form-control" name="q" id="q" placeholder=" " required>
+                            <label for="q">*Nome fantasia ou razão social</label>
                           </div>
                           <div class="form-floating mb-3">
                             <input type="text" class="form-control" name="cnpj" minlength="18" onkeypress="$(this).mask('00.000.000/0000-00')" id="cnpj" placeholder=" ">

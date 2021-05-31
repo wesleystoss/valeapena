@@ -1,6 +1,7 @@
 function mostrar_busca_avancada(){
     document.getElementById("busca_avancada").style.display = "block"
 }
+
 function m_usu_news(){
     var x = document.getElementById("ver_newslestter").value
 
@@ -12,6 +13,13 @@ function m_usu_news(){
         document.getElementById("ver_newslestter").value = "Ver"
     }
  }
+
+ function responder_post(){
+    document.getElementById("response").style.display="block";
+}
+function descartar_post(){
+    document.getElementById("response").style.display="none";
+}
 
  // Botão voltar ao topo
     $(document).scroll(function() {
