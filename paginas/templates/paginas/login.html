@@ -1,0 +1,25 @@
+{%extends 'base.html'%}
+
+{%block 'conteudo'%}
+<main>
+    <div class="container card" style="max-width: 350px;">
+        <i class="bi bi-person-circle text-secondary" style="font-size: 80px; text-align: center;"></i>
+        <h6 class="text-center mb-5">Entrar com novo usuário</h6>
+        <div class="text-center">
+            <form action="">
+                <input type="email" class="form-control mb-3" placeholder="E-mail" required>
+                <input type="password" class="form-control mb-3" placeholder="Senha" required>
+                <div class="form-check mb-3 text-center">
+                    <input class="form-check-input float-none" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault" role="button">
+                    Manter-me conectado
+                    </label><br>
+                    <a href="#" class="mb-3">Recuperar senha</a>
+                </div>
+                <hr>
+                <input type="submit" class="btn btn-primary form-control mb-3" value="Entrar">
+            </form>
+        </div>
+    </div>
+</main>
+{%endblock%}

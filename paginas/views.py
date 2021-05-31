@@ -31,6 +31,9 @@ def faq(request):
 def termo_privacidade(request):
     return render(request, 'paginas/termo-privacidade.html')
 
+def login(request):
+    return render(request, 'paginas/login.html')
+
 # Control do fórum
 
 def forum(request):

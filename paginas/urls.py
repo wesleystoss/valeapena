@@ -11,6 +11,8 @@ urlpatterns = [
     path('compare/', views.compare, name="compare"),
     path('empresas/', views.empresas, name="empresas"),
     path('termo/privacidade', views.termo_privacidade, name="termo_privacidade"),
+    path('login/', views.login, name="login"),
+    
 
     # Enquetes
     path('enquetes/', views.enquetes, name="enquetes"),
