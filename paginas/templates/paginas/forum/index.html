@@ -8,13 +8,20 @@
         border-top: 1px solid #ccc;
     }
 </style>
-<main>
-    <div class="container card">
-        <h6>Fóruns de discussões
-            <a href="{% url 'forum_publicar' %}">
-                <button class="float-end btn btn-warning">Nova publicação</button>
-            </a>
-        </h6>
+<main class="row">
+    <div class="container filtros_forum container col-2">
+        <a href="{% url 'forum_publicar' %}">
+            <button class="btn btn-warning form-control mb-3">Quero publicar</button>
+        </a>
+        <div class="container card">
+            <h6>Filtros</h6>
+            <ul>
+                <li><a href="?mais_recentes">Mais recentes</a></li>
+                <li><a href="?mais_comentadas">Mais comentadas</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="container col-9">
     <section class="posts_recentes">
         <div class="post_no_forum container card">
             <div class="dados_do_post">               
