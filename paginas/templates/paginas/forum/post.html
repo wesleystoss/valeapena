@@ -36,14 +36,12 @@
     </div>
     <div class="container card">
         <div class="dados_do_post">               
-            <h6 class="mb-4"><i class="bi bi-person-circle foto_user_post"></i> Wesley Santos
+            <h6 class="mb-4"><i class="bi bi-person-circle foto_user_post"></i> Wesley Santos | <label>Sugestões de notebooks gamers baratos</label> | <i class="text-secondary fst-italic fw-normal">Postado em 10/05/2021</i>
                 <div class="votes float-end row" style="max-width: 80px;">
                     <i class="bi bi-arrow-up text-success mb-3" role="button">345</i>
                     <i class="bi bi-arrow-down text-danger" role="button">24</i>
                 </div>
                 <hr>
-                <span class="float-end text-secondary fst-italic fw-normal">Postado em 10/05/2021</span>
-                <a href="{% url 'post' %}">Sugestões de notebooks gamers baratos</a>
             </h6>
         </div>
         <div class="descrição_post mb-4">
@@ -52,7 +50,7 @@
             </span>
         </div>
         <div class="post_footer footer mb-2">
-            <div class="mb-3 row" role="button" style="*width: 120px;" onclick="responder_post()">
+            <div class="mb-3 row" role="button" style="width: 130px;" onclick="responder_post()">
                 <a href="#"><i class="bi bi-reply-all"></i> Responder</a>
             </div>
             <div id="response" style="display: none;">
@@ -60,7 +58,7 @@
                 <h6 class="mb-3"><i class="bi bi-person-circle foto_user_post"></i> Wesley Santos
                     <i class="btn-close float-end" role="button" onclick="descartar_post()" style="margin: 10px 10px;"></i>
                 </h6>
-                <form action="." onsubmit="return confirm('Deseja prosseguir com a publicação?')">
+                <form action="./?publicado=true" onsubmit="return confirm('Deseja prosseguir com a publicação?')">
                     <textarea class="form-control mb-3" rows="10" required></textarea>
                     <button type="submit" class="btn btn-primary"><i class="bi bi-check2-circle"></i> Publicar</button>
                 </form>
