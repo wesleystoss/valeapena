@@ -283,3 +283,12 @@ tr{
   height: 35px;
   border-radius: 50%;
 }
+.bi-emoji-angry{
+  color: red;
+}
+.bi-emoji-neutral{
+  color: gold;
+}
+.bi-emoji-laughing{
+  color:  green;
+}

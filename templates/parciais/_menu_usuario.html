@@ -24,11 +24,10 @@
     </div>
     <hr>
     <ul class="menu_usuario">
-        <li><a href="#Ver_perfil">Ver perfil</li></a>
-        <li><a href="{% url 'criar_conteudo' %}">Gerenciar conteúdos</li></a>
-        <li><a href="{% url 'meus_dados' %}">Dados da conta</li></a>
-        <li><a href="{% url 'seguranca' %}">Segurança</li></a>
-        <li class="dropdown-toggle" role="button" onclick="m_usu_news()"><i>Newslestter</i> </li>
+        <li><a href="{% url 'meus_dados' %}"><i class="bi bi-person-lines-fill"></i> Dados da conta</li></a>
+        <li><a href="{% url 'criar_conteudo' %}"><i class="bi bi-hand-index-thumb"></i> Gerenciar conteúdos</li></a>
+        <li><a href="{% url 'seguranca' %}"><i class="bi bi-key"></i> Segurança</li></a>
+        <li class="dropdown-toggle" role="button" onclick="m_usu_news()"><i><i class="bi bi-newspaper"></i> Newslestter</i> </li>
         <input type="hidden" id="ver_newslestter">
         <ul id="lista_news" style="display: none;">
             <li><a href="{% url 'news_artigos' %}">Artigos</a></li>
