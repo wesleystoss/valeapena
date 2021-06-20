@@ -16,11 +16,11 @@
                 <div class="item_card">
                     <form class="form-floating" action="">
                         <div class="form-floating mb-3">
-                            <input type="text" class="form-control" name="q" id="q" placeholder=" " value="{{ termo_procurado }}">
+                            <input type="text" class="form-control" required name="q" id="q" placeholder=" " value="{{ termo_procurado }}">
                             <label for="q">Palavras-chave</label>
                           </div>
                           <div class="form-floating mb-3">
-                            <input type="text" class="form-control" name="cnpj" minlength="18" onkeypress="$(this).mask('00.000.000/0000-00')" id="cnpj" placeholder=" ">
+                            <input type="text" class="form-control" name="cnpj" minlength="18" onkeypress="$(this).mask('00.000.000/0000-00')" id="cnpj" placeholder=" " value="{{ cnpj_procurado }}">
                             <label for="cnpj">CNPJ</label>
                           </div>
                         <div class="mb-3" style="border: 1px solid #ccc; border-radius: 4px; padding: 10px;">
@@ -64,7 +64,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
             <div class="card container">
-                <h6>Empresas<i class="bi bi-arrows-fullscreen float-end icone_cabecario_card"></i></h6>
+                <h6>Empresas</h6>
                 <p class="descricao_card">Fique por dentro do melhor marketing nos últimos 6 meses</p>
                 <div class="item_card">
                     <table class="table">
@@ -75,7 +75,7 @@
                                 <td><i class="bi bi-emoji-angry empresas"></i> <a href="{% url 'ver_empresa_avaliacoes'%}?p=Ruins">449</a></td>
                                 <td><i class="bi bi-emoji-neutral empresas"> </i><a href="{% url 'ver_empresa_avaliacoes'%}?p=Razoáveis">479</a></td>
                                 <td><i class="bi bi-emoji-laughing empresas"></i> <a href="{% url 'ver_empresa_avaliacoes'%}?p=Boas">442</a></td>
-                                <td><i class="bi bi-chat-quote empresas"></i> <a href="{% url 'ver_empresa_avaliacoes'%}">2323</a></td>
+                                <td><i class="bi bi-chat-quote empresas"></i> <a href="{% url 'ver_empresa'%}">2323</a></td>
                                 <td><i class="bi bi-award empresas"></i> <a href="">10</a></td>
                                 <td><a href=""><i class="bi bi-share empresas"></i></a></td>
                             </tr>
@@ -88,7 +88,7 @@
                 </div>
             </div>
             <div class="card container">
-                <h6>Comentários<i class="bi bi-arrows-fullscreen float-end icone_cabecario_card"></i></h6>
+                <h6>Comentários</h6>
                 <p class="descricao_card">Fique por dentro do melhor marketing nos últimos 6 meses</p>
                 <div class="item_card">
                     ...
@@ -98,7 +98,7 @@
                 </div>
             </div>            
             <div class="card container">
-                <h6>Enquetes<i class="bi bi-arrows-fullscreen float-end icone_cabecario_card"></i></h6>
+                <h6>Enquetes</h6>
                 <p class="descricao_card">Fique por dentro do melhor marketing nos últimos 6 meses</p>
                 <div class="item_card">
                     ...
@@ -108,7 +108,7 @@
                 </div>
             </div>
             <div class="card container">
-                <h6>Artigos<i class="bi bi-arrows-fullscreen float-end icone_cabecario_card"></i></h6>
+                <h6>Artigos</h6>
                 <p class="descricao_card">Fique por dentro do melhor marketing nos últimos 6 meses</p>
                 <div class="item_card">
                     ...
@@ -141,14 +141,17 @@
                             <input type="url" class="form-control" name="site" minlength="18" id="site" placeholder="https://www.teste.com.br">
                             <label for="site">Site</label>
                           </div>
-                        <div class="mb-3">
-                            <label for="">Produto/Serviço</label>
-                            <div style="overflow-y: scroll; max-height: 150px;" class="container">
+                          <div class="mb-3" style="border: 1px solid #ccc; border-radius: 4px; padding: 10px;">
+                            <label class="mb-3">Produto/Serviço</label>
+                            <div style="overflow-y: scroll; max-height: 150px;" class="container mb-3">
                                 {% for l_produto in lista_produtos_e_servicos %}
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="m_{{l_produto }}"><label class="form-check-label" for="m_{{ l_produto }}">{{ l_produto }}</label>
+                                    <input class="form-check-input" type="checkbox" name="produtos/servicos" value="{{l_produto }}" id="sugerir_{{l_produto }}"><label class="form-check-label" for="sugerir_{{ l_produto }}">{{ l_produto }}</label>
                                 </div>
                                 {% endfor %}
+                            </div>
+                            <div class="text-center">
+                                <a href="#" class="link_card" data-bs-toggle="modal" data-bs-target="#modal_filtrar_categorias">Ver mais</a>
                             </div>
                         </div>
                           <div class="col-md mb-3">
@@ -162,7 +165,7 @@
                               <label for="regiao">Região</label>
                             </div>
                           </div>
-                        <div class="modal-footer">
+                        <div class="modal-footer container" style="justify-content: center;">
                             <input type="submit" name="f" class="form-control btn btn-primary mb-3" value="Enviar sugestão">
                         </div>
                     </form>

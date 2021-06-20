@@ -2,18 +2,42 @@
 {% load static %}
 {%block 'conteudo'%}
 <main>
-    <div class="apresentacao_post card container">
-        Autor
-        Data de abertura: 30/05/2021
-        Empresa
-        CNPJ
-        Site
-        Categorias
+    <div class="container text-center mb-4">
+        <img src="{% static 'img/dell.jpg' %}"  class="mb-3" style="height: 100px;">
+    </div>
+    <div class="apresentacao_post card container" style="min-height: 80px;">
+        <div class="" style="text-align-last: justify; padding-top: 6px;">
+            <label>
+                <b>Autor</b>
+                <br>
+                Wesley Santos
+            </label>
+            <label>
+                <b>Data de abertura</b>
+                <br>
+                30/05/2021
+            </label>
+            <label>
+                <b>Empresa</b>
+                <br>
+                Dell Technologies
+            </label>
+            <label>
+                <b>CNPJ</b>
+                <br>
+                26.996.799/0001-96
+            </label>
+            <label>
+                <b>Site</b>
+                <br>
+                <a href="#">https://www.dell.com.br</a>
+            </label>
+        </div>
     </div>
     <div class="container card">
         <div class="dados_do_post">               
-            <h6 class="mb-4"><i class="bi bi-person-circle foto_user_post"></i> <a href="">Wesley Santos</a> | <img src="{% static 'img/dell.jpg' %}" class="logo_empresa_post"> <a href="/../busca/empresa/comentarios">Dell Technologies</a>
-                <div class="votes float-end row">
+            <h6 class="mb-4"><i class="bi bi-person-circle foto_user_post"></i> Wesley Santos
+                <div class="votes float-end row" style="max-width: 80px;">
                     <i class="bi bi-arrow-up text-success mb-3" role="button">345</i>
                     <i class="bi bi-arrow-down text-danger" role="button">24</i>
                 </div>
@@ -33,13 +57,12 @@
             </div>
             <div id="response" style="display: none;">
                 <hr>
-                <h6 class="mb-3"><i class="bi bi-person-circle foto_user_post"></i> <a href="">Wesley Santos</a></h6>
-                <form action="">
+                <h6 class="mb-3"><i class="bi bi-person-circle foto_user_post"></i> Wesley Santos
+                    <i class="btn-close float-end" role="button" onclick="descartar_post()" style="margin: 10px 10px;"></i>
+                </h6>
+                <form action="." onsubmit="return confirm('Deseja prosseguir com a publicação?')">
                     <textarea class="form-control mb-3" rows="10" required></textarea>
-                    <input type="submit" class="btn btn-primary" value="Publicar">
-                        <button class="btn btn-danger"  onclick="descartar_post()">
-                            <i class="bi bi-trash"></i> descartar
-                        </button>
+                    <button type="submit" class="btn btn-primary"><i class="bi bi-check2-circle"></i> Publicar</button>
                 </form>
             </div>
         </div>
