@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import { Search, Menu, X, User, LogOut, Building2, Star } from 'lucide-react'
+import { Search, Menu, X, User, LogOut, Building2, Star, HelpCircle } from 'lucide-react'
 
 const Header = ({ isLoggedIn, user, setIsLoggedIn }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -33,15 +33,15 @@ const Header = ({ isLoggedIn, user, setIsLoggedIn }) => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <Link to="/" className="text-gray-600 hover:text-primary-600 transition-colors">
-              Início
+            <Link to="/" className="text-gray-600 hover:text-primary-600 transition-colors text-lg">
+              Página Inicial
             </Link>
-            <Link to="/search" className="text-gray-600 hover:text-primary-600 transition-colors">
+            <Link to="/search" className="text-gray-600 hover:text-primary-600 transition-colors text-lg">
               Buscar Empresas
             </Link>
             {isLoggedIn && user?.type === 'company' && (
-              <Link to="/dashboard" className="text-gray-600 hover:text-primary-600 transition-colors">
-                Dashboard
+              <Link to="/dashboard" className="text-gray-600 hover:text-primary-600 transition-colors text-lg">
+                Minha Empresa
               </Link>
             )}
           </nav>
@@ -51,12 +51,12 @@ const Header = ({ isLoggedIn, user, setIsLoggedIn }) => {
             <div className="relative w-full">
               <input
                 type="text"
-                placeholder="Buscar empresas, produtos ou serviços..."
+                placeholder="Digite o nome da empresa..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent text-lg"
               />
-              <Search className="absolute left-3 top-2.5 w-5 h-5 text-gray-400" />
+              <Search className="absolute left-3 top-3 w-5 h-5 text-gray-400" />
             </div>
           </form>
 
@@ -71,7 +71,7 @@ const Header = ({ isLoggedIn, user, setIsLoggedIn }) => {
                   <div className="w-8 h-8 bg-primary-100 rounded-full flex items-center justify-center">
                     <User className="w-4 h-4 text-primary-600" />
                   </div>
-                  <span className="hidden sm:block">{user?.name || 'Usuário'}</span>
+                  <span className="hidden sm:block text-lg">{user?.name || 'Usuário'}</span>
                 </button>
 
                 {isMenuOpen && (
@@ -87,7 +87,7 @@ const Header = ({ isLoggedIn, user, setIsLoggedIn }) => {
                         onClick={() => setIsMenuOpen(false)}
                       >
                         <Building2 className="w-4 h-4 mr-2" />
-                        Dashboard
+                        Minha Empresa
                       </Link>
                     )}
                     <button
@@ -102,11 +102,11 @@ const Header = ({ isLoggedIn, user, setIsLoggedIn }) => {
               </div>
             ) : (
               <div className="flex items-center space-x-2">
-                <Link to="/login" className="btn-secondary">
+                <Link to="/login" className="btn-secondary text-lg px-6 py-2">
                   Entrar
                 </Link>
-                <Link to="/register" className="btn-primary">
-                  Cadastrar
+                <Link to="/register" className="btn-primary text-lg px-6 py-2">
+                  Criar Conta
                 </Link>
               </div>
             )}
@@ -126,12 +126,12 @@ const Header = ({ isLoggedIn, user, setIsLoggedIn }) => {
           <form onSubmit={handleSearch} className="relative">
             <input
               type="text"
-              placeholder="Buscar empresas, produtos ou serviços..."
+              placeholder="Digite o nome da empresa..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+              className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent text-lg"
             />
-            <Search className="absolute left-3 top-2.5 w-5 h-5 text-gray-400" />
+            <Search className="absolute left-3 top-3 w-5 h-5 text-gray-400" />
           </form>
         </div>
 
@@ -141,14 +141,14 @@ const Header = ({ isLoggedIn, user, setIsLoggedIn }) => {
             <nav className="flex flex-col space-y-2">
               <Link
                 to="/"
-                className="px-4 py-2 text-gray-600 hover:text-primary-600 hover:bg-gray-50 rounded-lg transition-colors"
+                className="px-4 py-3 text-gray-600 hover:text-primary-600 hover:bg-gray-50 rounded-lg transition-colors text-lg"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Início
+                Página Inicial
               </Link>
               <Link
                 to="/search"
-                className="px-4 py-2 text-gray-600 hover:text-primary-600 hover:bg-gray-50 rounded-lg transition-colors"
+                className="px-4 py-3 text-gray-600 hover:text-primary-600 hover:bg-gray-50 rounded-lg transition-colors text-lg"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Buscar Empresas
@@ -156,10 +156,10 @@ const Header = ({ isLoggedIn, user, setIsLoggedIn }) => {
               {isLoggedIn && user?.type === 'company' && (
                 <Link
                   to="/dashboard"
-                  className="px-4 py-2 text-gray-600 hover:text-primary-600 hover:bg-gray-50 rounded-lg transition-colors"
+                  className="px-4 py-3 text-gray-600 hover:text-primary-600 hover:bg-gray-50 rounded-lg transition-colors text-lg"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  Dashboard
+                  Minha Empresa
                 </Link>
               )}
             </nav>

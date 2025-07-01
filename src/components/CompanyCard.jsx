@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { Star, CheckCircle, MapPin } from 'lucide-react'
+import { Star, CheckCircle, MapPin, ThumbsUp } from 'lucide-react'
 
 const CompanyCard = ({ company }) => {
   const getRatingColor = (rating) => {
@@ -11,8 +11,8 @@ const CompanyCard = ({ company }) => {
 
   const getRatingText = (rating) => {
     if (rating >= 4.5) return 'Excelente'
-    if (rating >= 4.0) return 'Muito Bom'
-    if (rating >= 3.0) return 'Bom'
+    if (rating >= 4.0) return 'Muito Boa'
+    if (rating >= 3.0) return 'Boa'
     return 'Regular'
   }
 
@@ -24,7 +24,7 @@ const CompanyCard = ({ company }) => {
           <div className="flex-shrink-0">
             <img
               src={company.logo}
-              alt={`Logo ${company.name}`}
+              alt={`Logo da empresa ${company.name}`}
               className="w-16 h-16 rounded-lg object-cover"
             />
           </div>
@@ -36,7 +36,10 @@ const CompanyCard = ({ company }) => {
                 {company.name}
               </h3>
               {company.isVerified && (
-                <CheckCircle className="w-5 h-5 text-primary-600 flex-shrink-0" />
+                <div className="flex items-center space-x-1">
+                  <CheckCircle className="w-5 h-5 text-primary-600 flex-shrink-0" />
+                  <span className="text-xs text-primary-600 font-medium">Verificada</span>
+                </div>
               )}
             </div>
 
@@ -71,15 +74,19 @@ const CompanyCard = ({ company }) => {
                 </span>
               </div>
               <span className="text-xs text-gray-500">
-                {company.reviews.toLocaleString()} avaliações
+                {company.reviews.toLocaleString()} pessoas avaliaram
               </span>
             </div>
 
             {/* Rating Text */}
-            <div className="mt-2">
+            <div className="mt-2 flex items-center justify-between">
               <span className={`text-xs font-medium ${getRatingColor(company.rating)}`}>
                 {getRatingText(company.rating)}
               </span>
+              <div className="flex items-center space-x-1 text-xs text-gray-500">
+                <ThumbsUp className="w-3 h-3" />
+                <span>Recomendada</span>
+              </div>
             </div>
           </div>
         </div>

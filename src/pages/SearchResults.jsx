@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { useSearchParams } from 'react-router-dom'
-import { Search, Filter, Star, CheckCircle, MapPin, Users, Calendar } from 'lucide-react'
+import { Search, Filter, Star, CheckCircle, MapPin, Users, Calendar, HelpCircle } from 'lucide-react'
 import CompanyCard from '../components/CompanyCard'
 
 const SearchResults = () => {
@@ -135,18 +135,18 @@ const SearchResults = () => {
             <div className="relative">
               <input
                 type="text"
-                placeholder="Buscar empresas, produtos ou serviços..."
+                placeholder="Digite o nome da empresa que você quer pesquisar..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full px-4 py-3 pl-12 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                className="w-full px-4 py-3 pl-12 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent text-lg"
               />
               <Search className="absolute left-4 top-3.5 w-5 h-5 text-gray-400" />
             </div>
           </form>
 
           {query && (
-            <p className="text-gray-600 mt-2">
-              {loading ? 'Buscando...' : `${filteredCompanies.length} resultado(s) para "${query}"`}
+            <p className="text-gray-600 mt-2 text-lg">
+              {loading ? 'Procurando empresas...' : `${filteredCompanies.length} empresa(s) encontrada(s) para "${query}"`}
             </p>
           )}
         </div>
@@ -157,20 +157,21 @@ const SearchResults = () => {
             <div className="card">
               <div className="flex items-center space-x-2 mb-4">
                 <Filter className="w-5 h-5 text-gray-600" />
-                <h3 className="font-semibold text-gray-900">Filtros</h3>
+                <h3 className="font-semibold text-gray-900 text-lg">Filtros</h3>
+                <HelpCircle className="w-4 h-4 text-gray-400" title="Use os filtros para encontrar empresas específicas" />
               </div>
 
               {/* Category Filter */}
               <div className="mb-6">
                 <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Categoria
+                  Tipo de empresa
                 </label>
                 <select
                   value={filters.category}
                   onChange={(e) => handleFilterChange('category', e.target.value)}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent text-lg"
                 >
-                  <option value="">Todas as categorias</option>
+                  <option value="">Todos os tipos</option>
                   {categories.map(category => (
                     <option key={category} value={category}>{category}</option>
                   ))}
@@ -180,18 +181,18 @@ const SearchResults = () => {
               {/* Rating Filter */}
               <div className="mb-6">
                 <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Avaliação mínima
+                  Nota mínima
                 </label>
                 <select
                   value={filters.rating}
                   onChange={(e) => handleFilterChange('rating', e.target.value)}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent text-lg"
                 >
-                  <option value="">Qualquer avaliação</option>
-                  <option value="4.5">4.5+ estrelas</option>
-                  <option value="4.0">4.0+ estrelas</option>
-                  <option value="3.5">3.5+ estrelas</option>
-                  <option value="3.0">3.0+ estrelas</option>
+                  <option value="">Qualquer nota</option>
+                  <option value="4.5">4.5+ estrelas (Muito boa)</option>
+                  <option value="4.0">4.0+ estrelas (Boa)</option>
+                  <option value="3.5">3.5+ estrelas (Regular)</option>
+                  <option value="3.0">3.0+ estrelas (Aceitável)</option>
                 </select>
               </div>
 
@@ -202,21 +203,24 @@ const SearchResults = () => {
                     type="checkbox"
                     checked={filters.verified}
                     onChange={(e) => handleFilterChange('verified', e.target.checked)}
-                    className="rounded border-gray-300 text-primary-600 focus:ring-primary-500"
+                    className="rounded border-gray-300 text-primary-600 focus:ring-primary-500 w-5 h-5"
                   />
                   <span className="text-sm font-medium text-gray-700">
                     Apenas empresas verificadas
                   </span>
                 </label>
+                <p className="text-xs text-gray-500 mt-1">
+                  Empresas verificadas são mais confiáveis
+                </p>
               </div>
 
               {/* Clear Filters */}
               {(filters.category || filters.rating || filters.verified) && (
                 <button
                   onClick={() => setFilters({ category: '', rating: '', verified: false })}
-                  className="w-full text-sm text-primary-600 hover:text-primary-700 font-medium"
+                  className="w-full text-sm text-primary-600 hover:text-primary-700 font-medium py-2"
                 >
-                  Limpar filtros
+                  Limpar todos os filtros
                 </button>
               )}
             </div>
@@ -227,7 +231,7 @@ const SearchResults = () => {
             {loading ? (
               <div className="flex items-center justify-center py-12">
                 <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary-600"></div>
-                <span className="ml-2 text-gray-600">Carregando...</span>
+                <span className="ml-2 text-gray-600 text-lg">Procurando empresas...</span>
               </div>
             ) : filteredCompanies.length > 0 ? (
               <div className="space-y-4">
@@ -243,9 +247,14 @@ const SearchResults = () => {
                 <h3 className="text-lg font-medium text-gray-900 mb-2">
                   Nenhuma empresa encontrada
                 </h3>
-                <p className="text-gray-600">
-                  Tente ajustar os filtros ou fazer uma nova busca.
+                <p className="text-gray-600 text-lg">
+                  Tente:
                 </p>
+                <ul className="text-gray-600 text-lg mt-2 space-y-1">
+                  <li>• Digitar o nome da empresa de forma diferente</li>
+                  <li>• Usar menos filtros</li>
+                  <li>• Procurar por um tipo de empresa específico</li>
+                </ul>
               </div>
             )}
           </div>
